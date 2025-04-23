@@ -16,8 +16,12 @@ This repository contains documentation and technical knowledge articles from my 
 
 - **[Documentation](/documentation)**: Technical guides and setup procedures  
 - **[Knowledge Base](/knowledge-base)**: Problem-solution articles and troubleshooting guides  
+## Getting Started with Warp.dev
 
-## Environment Specifications  
+- **[Getting Started with Warp.dev](docs/getting-started-with-warp.md)**: Step-by-step guide to install and configure Warp on Windows.
+- **[Importing and Using Lab Workflows](docs/importing-and-using-workflows.md)**: Guide to record, export, import, and share reusable AD lab workflows.
+
+## Environment Specifications
 
 - **Domain Controller**:  
   - OS: Windows Server 2019 Standard  
