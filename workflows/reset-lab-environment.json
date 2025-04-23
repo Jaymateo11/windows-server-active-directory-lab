@@ -1,0 +1,19 @@
+{
+  "name": "Reset Lab Environment",
+  "description": "Rollback or restart VMs, clear temporary AD objects, and reset test user passwords.",
+  "steps": [
+    {
+      "command": "Restart-Computer -ComputerName DC01-AD-Project,Client01 -Force",
+      "description": "Restart lab virtual machines"
+    },
+    {
+      "command": "Get-ADUser -Filter 'Name -like \"Test*\"' | ForEach-Object { Remove-ADUser -Identity $_.DistinguishedName -Confirm:$false }",
+      "description": "Remove temporary AD user accounts"
+    },
+    {
+      "command": "Set-ADAccountPassword -Identity TestUser -Reset -NewPassword (ConvertTo-SecureString \"P@ssw0rd!\" -AsPlainText -Force)",
+      "description": "Reset password for TestUser"
+    }
+  ]
+}
+

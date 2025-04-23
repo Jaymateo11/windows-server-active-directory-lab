@@ -1,0 +1,15 @@
+{
+  "name": "Health Check",
+  "description": "Run Active Directory replication checks and diagnostics, exporting results to log files.",
+  "steps": [
+    {
+      "command": "Get-ADReplicationFailure | Out-File replication-failures-$(Get-Date -Format yyyyMMdd_HHmmss).log",
+      "description": "Export AD replication failures"
+    },
+    {
+      "command": "dcdiag /v | Out-File dcdiag-report-$(Get-Date -Format yyyyMMdd_HHmmss).txt",
+      "description": "Export DC diagnostic report"
+    }
+  ]
+}
+

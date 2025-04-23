@@ -1,0 +1,11 @@
+{
+  "name": "Snapshot VMs",
+  "description": "Take timestamped snapshots of all lab virtual machines using Hyper-V.",
+  "steps": [
+    {
+      "command": "Get-VM | ForEach-Object { Checkpoint-VM -VMName $_.Name -SnapshotName (\"$($_.Name)-$(Get-Date -Format 'yyyyMMdd_HHmmss')\") }",
+      "description": "Create a new snapshot for each VM"
+    }
+  ]
+}
+

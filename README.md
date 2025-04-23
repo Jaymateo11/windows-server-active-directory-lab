@@ -43,3 +43,5 @@ This repository contains documentation and technical knowledge articles from my 
 - Network configuration and troubleshooting  
 - DNS server setup and management  
 - Technical documentation creation
+## Collection of Reusable Workflows
+- [Collection of Reusable Workflows](docs/collection-of-workflows.md)
